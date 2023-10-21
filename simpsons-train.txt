@@ -1,0 +1,12 @@
+1. Simpsons{age=22, genre='M', height='Short', weight=168.72, topClothesColor='Blue', bottomClothesColor='None', shoesColor='Yellow', hairColor='Green'}
+2. Simpsons{age=15, genre='M', height='Short', weight=169.17, topClothesColor='None', bottomClothesColor='Orange', shoesColor='Green', hairColor='None'}
+3. Simpsons{age=59, genre='M', height='Short', weight=23.07, topClothesColor='Green', bottomClothesColor='Green', shoesColor='Yellow', hairColor='Blue'}
+4. Simpsons{age=52, genre='M', height='Short', weight=112.92, topClothesColor='Blue', bottomClothesColor='None', shoesColor='None', hairColor='White'}
+5. Simpsons{age=95, genre='F', height='Short', weight=157.02, topClothesColor='Red', bottomClothesColor='Green', shoesColor='None', hairColor='Blue'}
+6. Simpsons{age=31, genre='M', height='Short', weight=93.12, topClothesColor='Red', bottomClothesColor='None', shoesColor='Red', hairColor='Yellow'}
+7. Simpsons{age=16, genre='M', height='Big', weight=135.15, topClothesColor='Green', bottomClothesColor='None', shoesColor='Yellow', hairColor='Green'}
+8. Simpsons{age=14, genre='M', height='Big', weight=84.06, topClothesColor='White', bottomClothesColor='Orange', shoesColor='White', hairColor='None'}
+9. Simpsons{age=66, genre='F', height='Short', weight=69.95, topClothesColor='Blue', bottomClothesColor='Blue', shoesColor='Orange', hairColor='None'}
+10. Simpsons{age=22, genre='M', height='Short', weight=151.55, topClothesColor='Orange', bottomClothesColor='None', shoesColor='Red', hairColor='Red'}
+11. Simpsons{age=66, genre='M', height='Short', weight=85.16, topClothesColor='None', bottomClothesColor='Red', shoesColor='Blue', hairColor='Yellow'}
+12. Simpsons{age=69, genre='F', height='Big', weight=157.07, topClothesColor='Red', bottomClothesColor='Green', shoesColor='Yellow', hairColor='Blue'}
