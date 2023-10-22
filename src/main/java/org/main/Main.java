@@ -1,20 +1,11 @@
 package org.main;
 
 import org.factory.DecisionFilesFactory;
-import org.factory.FileFactory;
-import org.factory.SimpsonsFactory;
 import org.model.Bart;
 import org.model.Homer;
 import org.model.Lisa;
-import org.model.Simpsons;
-import weka.core.Attribute;
-import weka.core.Instances;
-import weka.core.converters.ConverterUtils;
-import weka.gui.beans.DataSink;
 
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Main {
     public static void main(String[] args) throws Exception {
@@ -37,6 +28,17 @@ public class Main {
         final String trainingDatasetFilename = "decision-training.arff";
         final String testingDatasetFilename = "decision-testing.arff";
 
+        var colors = new ArrayList<String>();
+        colors.add("Red");
+        colors.add("Orange");
+        colors.add("White");
+        colors.add("Blue");
+        colors.add("Yellow");
+        colors.add("None");
+        colors.add("Green");
+        colors.add("Pink");
+        colors.add("Grey");
+
         DecisionFilesFactory.createDecisionFiles(trainingDatasetFilename,  testingDatasetFilename);
 
         DecisionTree.process();
@@ -48,7 +50,7 @@ public class Main {
                 "Orange",
                 "Blue",
                 "Blue",
-                "Yellow");
+                "Yellow", Bart.getWhichSimpsons());
         Lisa lisa = new Lisa(8,
                 "F",
                 "Short",

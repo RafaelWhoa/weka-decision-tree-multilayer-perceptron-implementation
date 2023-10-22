@@ -17,14 +17,15 @@ import java.util.jar.Attributes;
 public class DecisionFilesFactory {
     public static void createDecisionFiles(String trainingDatasetFilename, String testingDatasetFilename) {
 
-            try {
-                BufferedWriter writer = new BufferedWriter(new java.io.FileWriter(trainingDatasetFilename));
-                writer.write(trainingDataset.toString());
-                writer.flush();
-                writer.close();
-            } catch (Exception e){
-                System.out.println("Failed to save dataset: " + e);
-            }
+
+        try {
+            BufferedWriter writer = new BufferedWriter(new java.io.FileWriter(trainingDatasetFilename));
+            writer.write(trainingDataset.toString());
+            writer.flush();
+            writer.close();
+        } catch (Exception e){
+            System.out.println("Failed to save dataset: " + e);
+        }
 
 
     }

@@ -1,5 +1,6 @@
 package org.factory;
 
+import org.model.Dataset;
 import weka.core.Attribute;
 import weka.core.Instances;
 
@@ -10,29 +11,20 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class DatasetFactory {
-    public static void createDataset(){
+    public static void main(String[] args) {
+
+    }
+    public static Instances createDataset(String trainingDatasetFilename,
+                                        String testingDatasetFilename,
+                                        ArrayList<String> colors,
+                                        Instances testDataset){
+
         ArrayList<Attribute> atts;
-        ArrayList<Attribute> attsRel;
+        Instances testingDataset;
+        double[] testingVals;
         ArrayList<String> genres;
         ArrayList<String> heights;
         ArrayList<String> simpsons;
-        ArrayList<String> attValsRel;
-        Instances trainingDataset;
-        Instances testingDataset;
-        Instances dataRel;
-        double[] trainingVals;
-        double[] testingVals;
-        double[] valsRel;
-        var colors = new ArrayList<String>();
-        colors.add("Red");
-        colors.add("Orange");
-        colors.add("White");
-        colors.add("Blue");
-        colors.add("Yellow");
-        colors.add("None");
-        colors.add("Green");
-        colors.add("Pink");
-        colors.add("Grey");
 
         atts = new ArrayList<Attribute>();
         atts.add(new Attribute("age"));
@@ -52,33 +44,9 @@ public class DatasetFactory {
         simpsons = new ArrayList<String>();
         simpsons.add("Short");
         simpsons.add("Big");
-        atts.add(new Attribute("whichSimpson", simpsons));
+        //atts.add(new Attribute("whichSimpson", simpsons));
 
-        trainingDataset = new Instances("TrainingSimpsonsRelation", atts, 0);
         testingDataset = new Instances("TestingSimpsonsRelation", atts, 0);
-
-        if(!Files.exists(Path.of(trainingDatasetFilename))){
-            for (int i = 1; i <= 500; i++){
-                trainingVals = new double[trainingDataset.numAttributes()];
-                trainingVals[0] = new Random().nextInt(0, 97);
-                trainingVals[1] = genres.indexOf(new Random().nextBoolean() ? "M" : "F");
-                trainingVals[2] = heights.indexOf(new Random().nextBoolean() ? "Short" : "Big");
-                trainingVals[3] = new Random().nextDouble(20, 200);
-                trainingVals[4] = colors.indexOf(colors.get(new Random().nextInt(0, 7)));
-                trainingVals[5] = colors.indexOf(colors.get(new Random().nextInt(0, 7)));
-                trainingVals[6] = colors.indexOf(colors.get(new Random().nextInt(0, 7)));
-                trainingVals[7] = colors.indexOf(colors.get(new Random().nextInt(0, 7)));
-                trainingDataset.add(new weka.core.DenseInstance(1.0, trainingVals));
-            }
-            try {
-                BufferedWriter writer = new BufferedWriter(new java.io.FileWriter(trainingDatasetFilename));
-                writer.write(trainingDataset.toString());
-                writer.flush();
-                writer.close();
-            } catch (Exception e){
-                System.out.println("Failed to save dataset: " + e);
-            }
-        }
 
         if(!Files.exists(Path.of(testingDatasetFilename))){
             for (int i = 1; i <= 100; i++){
@@ -93,14 +61,9 @@ public class DatasetFactory {
                 testingVals[7] = colors.indexOf(colors.get(new Random().nextInt(0, 7)));
                 testingDataset.add(new weka.core.DenseInstance(1.0, testingVals));
             }
-            try {
-                BufferedWriter writer = new BufferedWriter(new java.io.FileWriter(testingDatasetFilename));
-                writer.write(testingDataset.toString());
-                writer.flush();
-                writer.close();
-            } catch (Exception e){
-                System.out.println("Failed to save dataset: " + e);
-            }
         }
+        return testingDataset;
     }
+
+    public static Instances create
 }
