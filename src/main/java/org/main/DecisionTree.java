@@ -2,36 +2,15 @@ package org.main;
 
 import weka.classifiers.Classifier;
 import weka.classifiers.Evaluation;
-import weka.classifiers.meta.FilteredClassifier;
 import weka.classifiers.trees.J48;
 import weka.core.Instances;
-import weka.core.converters.ArffLoader;
 import weka.core.converters.ConverterUtils;
-import weka.gui.beans.DataSource;
 
-import java.io.File;
 import java.nio.file.Path;
 
 public class DecisionTree {
 
-//    public static Instances getDataSet(String fileName) {
-//        try {
-//            int classIdx = 1;
-//            ArffLoader loader = new ArffLoader();
-//            //loader.setSource(DecisionTree.class.getResourceAsStream("/" + fileName));
-//            loader.setFile(new File(fileName));
-//            Instances dataSet = loader.getDataSet();
-//            dataSet.setClassIndex(classIdx);
-//            return dataSet;
-//        } catch (Exception e) {
-//            System.out.println("Error: " + e);
-//            return null;
-//        }
-//    }
-
     public static void process(String trainingDatasetFilename, String testingDatasetFilename) throws Exception {
-//        Instances trainingDataSet = getDataSet("decision-training.arff");
-//        Instances testingDataSet = getDataSet("decision-testing.arff");
 
         ConverterUtils.DataSource traningSource = new ConverterUtils.DataSource(Path.of(trainingDatasetFilename).toUri().toString());
         ConverterUtils.DataSource testingSource = new ConverterUtils.DataSource(Path.of(testingDatasetFilename).toUri().toString());

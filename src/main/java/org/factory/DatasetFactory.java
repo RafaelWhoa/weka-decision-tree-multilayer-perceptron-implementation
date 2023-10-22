@@ -5,9 +5,6 @@ import org.model.SimpsonsTraining;
 import weka.core.Attribute;
 import weka.core.Instances;
 
-import java.lang.reflect.Array;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.Random;
 

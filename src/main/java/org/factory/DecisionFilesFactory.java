@@ -1,6 +1,5 @@
 package org.factory;
 
-import org.model.Simpsons;
 import org.model.SimpsonsTraining;
 import weka.core.Instances;
 

@@ -2,7 +2,6 @@ package org.main;
 
 import org.factory.DecisionFilesFactory;
 import org.factory.SimpsonsFactory;
-import org.model.Simpsons;
 import org.model.SimpsonsTraining;
 
 import java.util.ArrayList;
@@ -23,8 +22,8 @@ public class Main {
         colors.add("Pink");
         colors.add("Grey");
 
-        ArrayList<SimpsonsTraining> simpsonsForTraining = SimpsonsFactory.createSimpsonsForTesting2(colors);
-        ArrayList<SimpsonsTraining> simpsonsForTesting = SimpsonsFactory.createSimpsonsForTesting3(colors);
+        ArrayList<SimpsonsTraining> simpsonsForTraining = SimpsonsFactory.createSimpsonsForTraining(colors);
+        ArrayList<SimpsonsTraining> simpsonsForTesting = SimpsonsFactory.createSimpsonsForTesting(colors);
 
         DecisionFilesFactory.createDecisionFiles(trainingDatasetFilename, testingDatasetFilename, colors, simpsonsForTraining, simpsonsForTesting);
 
