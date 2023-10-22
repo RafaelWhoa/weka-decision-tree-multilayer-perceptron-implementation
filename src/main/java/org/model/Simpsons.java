@@ -1,10 +1,10 @@
 package org.model;
 
 public class Simpsons {
-    private static int age;
-    private static String genre;
-    private static String height;
-    private static double weight;
+    private int age;
+    private String genre;
+    private String height;
+    private double weight;
     private String topClothesColor;
     private String bottomClothesColor;
     private String shoesColor;
@@ -21,15 +21,15 @@ public class Simpsons {
         this.hairColor = hairColor;
     }
 
-    public static int getAge() {
+    public int getAge() {
         return age;
     }
 
-    public static String getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public static String getHeight() {
+    public String getHeight() {
         return height;
     }
 
@@ -40,7 +40,7 @@ public class Simpsons {
         return hairColor;
     }
 
-    public static double getWeight() {
+    public double getWeight() {
         return weight;
     }
 
