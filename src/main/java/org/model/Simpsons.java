@@ -9,6 +9,7 @@ public class Simpsons {
     private String bottomClothesColor;
     private String shoesColor;
     private String hairColor;
+    private String whichSimpsons;
 
     public Simpsons(int age, String genre, String height, double weight, String topClothesColor, String bottomClothesColor, String shoesColor, String hairColor) {
         this.age = age;
@@ -19,6 +20,7 @@ public class Simpsons {
         this.bottomClothesColor = bottomClothesColor;
         this.shoesColor = shoesColor;
         this.hairColor = hairColor;
+        this.whichSimpsons = whichSimpsons;
     }
 
     public int getAge() {
@@ -50,6 +52,9 @@ public class Simpsons {
 
     public String getShoesColor() {
         return shoesColor;
+    }
+    public String getWhichSimpsons() {
+        return whichSimpsons;
     }
 
     @Override

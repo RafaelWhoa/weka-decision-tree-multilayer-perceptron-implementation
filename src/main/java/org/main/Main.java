@@ -23,11 +23,11 @@ public class Main {
         colors.add("Pink");
         colors.add("Grey");
 
-        ArrayList<SimpsonsTraining> simpsonsForTraining = SimpsonsFactory.createSimpsonsForTraining(colors);
-        ArrayList<Simpsons> simpsonsForTesting = SimpsonsFactory.createSimpsonsForTesting(colors);
+        ArrayList<SimpsonsTraining> simpsonsForTraining = SimpsonsFactory.createSimpsonsForTesting2(colors);
+        ArrayList<SimpsonsTraining> simpsonsForTesting = SimpsonsFactory.createSimpsonsForTesting3(colors);
 
         DecisionFilesFactory.createDecisionFiles(trainingDatasetFilename, testingDatasetFilename, colors, simpsonsForTraining, simpsonsForTesting);
 
-        DecisionTree.process();
+        DecisionTree.process(trainingDatasetFilename, testingDatasetFilename);
     }
 }
